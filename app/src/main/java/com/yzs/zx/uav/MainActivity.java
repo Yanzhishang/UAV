@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
     TextView tv_electric, tv_height, tv_speed, tv_distance;
     final int CAMERA_RESULT = 0;//声明一个常量，代表结果码
     ImageView imageView;//声明一个ImageView对象
+    //private  MySurfaceView mView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class MainActivity extends Activity {
         //setContentView(new MySurfaceView(this));
         setContentView(R.layout.main);
         //获取控件
+
         btn_lacation = (Button) findViewById(R.id.btn_lacation);
         btn_photo = (Button) findViewById(R.id.btn_photo);
         btn_takeoff = (Button) findViewById(R.id.btn_takeoff);

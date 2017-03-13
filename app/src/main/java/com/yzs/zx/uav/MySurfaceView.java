@@ -43,6 +43,7 @@ public class MySurfaceView extends SurfaceView implements Callback, Runnable {
         th = new Thread(this);
         flag = true;
         th.start();
+
     }
 
     /***
@@ -108,10 +109,11 @@ public class MySurfaceView extends SurfaceView implements Callback, Runnable {
 
     public void draw() {
         try {
+
             canvas = sfh.lockCanvas();
             canvas.drawColor(Color.WHITE);
             //设置透明度
-            paint.setColor(0x70000000);
+            paint.setColor(Color.TRANSPARENT);
             //绘制摇杆背景
             canvas.drawCircle(RockerCircleX, RockerCircleY, RockerCircleR, paint);
             paint.setColor(0x70ff0000);
