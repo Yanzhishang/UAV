@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -109,9 +110,11 @@ public class MySurfaceView extends SurfaceView implements Callback, Runnable {
 
     public void draw() {
         try {
-
             canvas = sfh.lockCanvas();
-            canvas.drawColor(Color.WHITE);
+            //canvas.drawColor(Color.TRANSPARENT);
+            canvas.drawRGB(41,40,41);
+            //canvas.drawBitmap();
+            //canvas.drawColor(Color.WHITE);  //白色背景
             //设置透明度
             paint.setColor(Color.TRANSPARENT);
             //绘制摇杆背景
